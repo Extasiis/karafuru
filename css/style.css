@@ -31,7 +31,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    background: var(--color-negro)
+    background: linear-gradient(to left bottom, #a0202c, #922746, #7c3356, #633c5b, #4e4155);
 }
 
 /* Menu de navegacion */
@@ -173,4 +173,115 @@
     filter: invert(1);
     margin: 5px 0;
     transform: scale(0.6);
+}
+
+
+@media (max-width: 991px) {
+    .home{
+        padding: 40px;
+    }
+
+    .nav__header{
+        padding: 20px 40px;
+    }
+
+    .nav__logo{
+        max-width: 80px;
+    }
+
+    .nav__lista{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: fixed #fff;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .nav__lista.active{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav__enlace a{
+        color: var(--color-secundario);
+        margin-top: 20px;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .nav__enlace a:hover{
+        color: var(--color-primario);
+    }
+
+    .nav__navegador{
+        position: relative;
+        background: url('../assets/Foto/menu.png');
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: 35px;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .nav__navegador.active{
+        background: url('../assets/Foto/cerrar.png');
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .home__content{
+        flex-direction: column;
+        margin-top: 80px;
+        margin-bottom: 120px;
+    }
+
+    .home__textBox{
+        position: relative;
+        max-width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .home__title{
+        line-height: 40px;
+    }
+
+    .home__title span{
+        font-size: 1.2rem;
+    }
+
+
+    .home__imbox{
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    .home__imagen{
+        width: 300px;
+    }
+
+    .home__thumb{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 14px;
+    }
+
+    .home__csi{
+        right: 0;
+        background: rgb(0, 0, 0, 0.2);
+    }
+
 }
