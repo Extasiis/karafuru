@@ -1,24 +1,20 @@
 @font-face {
-    font-family: 'chunky_rosieregular';
-    src: url('../assets/Fonts/webfontkit-20220718-043550/chunkyrosiedemo-webfont.woff2') format('woff2'),
-         url('../assets/Fonts/webfontkit-20220718-043550/chunkyrosiedemo-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+    font-family: 'wet';
+    src: url('../assets/Fonts/8-bit-operator/8bitOperatorPlus-Regular.ttf');
 }
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;    
-    font-family: chunky_rosieregular;
+    font-family: 'wet';
 }
 
 :root{
     --color-primario:#ff1a88;
     --color-secundario:#17a2b8;
     --color-blanco: #fff;
-    --color-negro:#191919;
+    --color-negro:#fdfde9#fdfde9;
 }
 
 /* Section home */
@@ -31,7 +27,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    background: linear-gradient(to left bottom, #a0202c, #922746, #7c3356, #633c5b, #4e4155);
+    background-image: linear-gradient(to right bottom, #ffb570, #ffad5f, #ffa44f, #ff9b3d, #ff922a);
 }
 
 /* Menu de navegacion */
@@ -40,7 +36,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    padding: 20px 100px;
+    padding: 10px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +44,7 @@
 
 .nav__logo{
     position: relative;
-    max-width: 100px;
+    max-width: 320px;
 }
 
 .nav__lista{
@@ -110,11 +106,17 @@
     border-radius: 40px;
     font-weight: 500;
     color: var(--color-blanco);
-    padding: 10px;
+    padding: 10px 20px;
     text-decoration: none;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 20px;    
+    transition: all .1s;
+}
+
+.home__enlace:hover{
+    box-shadow:  5px 5px 9px #00000049,
+             -2px -2px 5px #ffffff93;
 }
 
 .home__imbox{
@@ -127,7 +129,16 @@
 
 .home__imagen{
     max-width: 460px;
+    border-radius: 20px;
+    box-shadow:  5px 5px 20px #0000004f,
+             -5px -5px 20px #0000001c;
+    transition: box-shadow .1s, transform 0.1s;
 } 
+
+.home__imagen:hover{
+    box-shadow:  15px 15px 50px #00000071,
+             -15px -15px 50px #0000001c;
+}
 
 .home__thumb{
     position: absolute;
@@ -140,6 +151,7 @@
 .home__lista{
     list-style: none;
     margin: 0 20px;
+    padding: 5px 10px;
     display: inline-block;
     cursor: pointer;
     transition: 0.5s;
@@ -175,6 +187,11 @@
     transform: scale(0.6);
 }
 
+.home__redes img{
+    width: 50px;
+    height: 50px;
+}
+
 
 @media (max-width: 991px) {
     .home{
@@ -186,7 +203,7 @@
     }
 
     .nav__logo{
-        max-width: 80px;
+        max-width: 180px;
     }
 
     .nav__lista{
